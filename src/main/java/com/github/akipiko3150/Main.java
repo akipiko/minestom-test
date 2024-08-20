@@ -1,6 +1,7 @@
 package com.github.akipiko3150;
 
 import com.github.akipiko3150.command.GameModeCommand;
+import com.github.akipiko3150.command.SkinCommand;
 import net.minestom.server.MinecraftServer;
 import net.minestom.server.coordinate.Pos;
 import net.minestom.server.entity.Player;
@@ -31,6 +32,7 @@ public class Main {
 
         // add command
         MinecraftServer.getCommandManager().register(new GameModeCommand());
+        MinecraftServer.getCommandManager().register(new SkinCommand());
 
         // add lighting
         container.setChunkSupplier(LightingChunk::new);
